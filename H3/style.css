@@ -1,0 +1,17 @@
+body {
+    text-align: center;
+}
+
+img {
+    height: 300px;
+    width: 300px;
+    border: 0px;
+}
+
+#panda {
+    width: 900px;
+    height: 900px;
+    border: 1px solid black;
+    margin: auto;
+    font-size: 0px;
+}
