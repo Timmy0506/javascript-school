@@ -48,6 +48,53 @@ function getPanda() {
     
 }
 
+/*H4:3*/
+
+var pictures2 = [1,2,3,4,5,6,7,8,9];
+var counter2 = 0;
+var slideholder2 = document.getElementById("slideholder2");
+slideholder2.style.backgroundImage = "url('img/panda7.jpg')";
+
+slideholder2.addEventListener("click", function() {
+    slideholder2.style.backgroundImage = "url('img/panda" + getPanda() + ".jpg ')";
+});
+
+function getPanda() {
+    if(counter2 >= pictures2.length) {
+        counter2 =1;
+    } else {
+        counter2 ++;
+    }
+
+    console.log(counter2);
+    return counter2;
+    
+}
+
+var pictures3 = [1,2,3,4,5,6,7,8,9];
+var counter3 = 0;
+var slideholder3 = document.getElementById("slideholder3");
+slideholder3.style.backgroundImage = "url('img/panda4.jpg')";
+
+slideholder3.addEventListener("click", function() {
+    slideholder3.style.backgroundImage = "url('img/panda" + getPanda() + ".jpg ')";
+});
+
+function getPanda() {
+    if(counter3 >= pictures3.length) {
+        counter3 =1;
+    } else {
+        counter3 ++;
+    }
+
+    console.log(counter3);
+    return counter3;
+    
+}
+
+
+
+
 
 
 
