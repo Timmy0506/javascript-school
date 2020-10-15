@@ -17,3 +17,5 @@ var mycar = {
 }
 
 console.log(mycar.colour);
+
+document.getElementById("kop").innerHTML = mycar.colour

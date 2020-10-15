@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>choose tha panda</title>
+    </head>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        div.picture-holder {
+            box-sizing: border-box;
+            height: 450px;
+            width: 300px;
+            float: left;
+            background-color: crimson;
+            border: solid 1px black;
+        }
+
+        div.fav {
+        
+            width: 300px;
+            height: 150px;
+            background-color: darkcyan;
+        }
+
+
+        #pics {
+            width: 900px;
+            height: 1350px;
+            border: solid 1px black;
+            font-size: 0px;
+            margin: auto;
+        }
+    </style>
+
+
+    <body>
+        <h4>choose your favourite red panda or you will be shot on site</h4>
+        <div id="pics">
+
+        </div>
+    
+    <script>
+        pics = document.getElementById("pics");
+        createPicsholders();
+        createPandaImages();
+
+        function createPicsholders() {
+            for (var a =0; a < 9; a ++) {
+                pictureHolder = document.createElement("div");
+                pictureHolder.className = "picture-holder";
+                pictureHolder.id = "picture-holder-" + a;
+                pics.appendChild(pictureHolder);
+            }
+        }
+
+        function createPandaImages() {
+            pictureHolders = document.getElementsByClassName("picture-holder");
+            for (var a = 0; a < pictureHolders.length; a ++) {
+                fav = document.createElement("div");
+                fav.className = "fav" + (a+1);
+                fav.id = "fav_" + (a+1);
+                pandaPlaatje = document.createElement("img");
+                pandaPlaatje.src = "img/panda" + (a+1) + ".jpg";
+                pandaPlaatje.id = (a+1);
+                pandaPlaatje.addEventListener("click", function() {
+                    addFav(this.id);
+                });
+                
+                pictureHolders[a].appendChild(pandaPlaatje);
+                pictureHolders[a].appendChild(fav);
+            }
+        }
+
+        function addFav(id) {
+            console.log("panda" + id)
+            fav = document.getElementById("fav_" + id );
+            fav.style.backgroundImage = "url ('img/fav.jpg')";
+        }
+    </script>
+    </body>
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
